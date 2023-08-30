@@ -1,0 +1,3 @@
+https://www.python.org/- Documentação, exemplos e bilbiotecas python
+https://git-scm.com/ - Sistema de controle de versão
+https://code.visualstudio.com/- Ambiente de desenvolvimento de codigos
