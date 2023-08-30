@@ -1,1 +1,1 @@
-#Trabalhos em geral da faculdade -> 2023.2
+#Trabalhos em geral da faculdade
