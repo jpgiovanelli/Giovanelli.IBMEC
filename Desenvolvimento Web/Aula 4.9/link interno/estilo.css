@@ -1,0 +1,151 @@
+@font-face {
+	font-family:'Gilroy Black';
+	font-style:normal;
+	font-weight:100;
+	src: url("Gilroy-ExtraBold.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #002438;
+    font-family: 'Gilroy Black';
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+main {
+    margin: 4%;
+}
+
+.logo-sellers {
+    width: 263px;
+    height: 109px;
+    margin-top: 6%;
+}
+
+.caixa-retangular login-element {
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #CAF0F8;
+    box-shadow: 0px 20px 5px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    color: #00456C;
+    justify-content: center;
+}
+
+.label {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.caixa-retangular login-element h1 {
+    font-size: 30px;
+}
+
+.caixa-retangular login-element p {
+    font-size: 15px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+    margin-top: 15%;
+    margin-bottom: 20%;
+}
+
+.user-icon {
+    width: 22px;
+    height: 22px;
+    margin-left: 9px;
+}
+
+username { 
+    width: 273.59px;
+    height: 24.976px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid #002438;
+    display: flex;
+    align-items: center;
+}
+
+username input {
+    background-color: transparent;
+    height: 24.976px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Gilroy Black';
+    color: #002438;
+    border-left: 2px solid #002438;
+    padding-left: 8px;
+} 
+
+.pass-icon {
+    width: 22px;
+    height: 22px;
+    margin-left: 8px;
+}
+
+password { 
+    width: 273.59px;
+    height: 24.976px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid #002438;
+    display: flex;
+    align-items: center;
+}
+
+password input {
+    background-color: transparent;
+    height: 24.976px;
+    margin-left: 5.3px;
+    border: none;
+    outline: none;
+    font-family: 'Gilroy Black';
+    color: #002438;
+    border-left: 2px solid #002438;
+    padding-left: 8px;
+}
+
+login-element div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    border-radius: 50px;
+    height: 35px;
+    width: 130px;
+    font-family: 'Gilroy Black';
+    color: #002438;
+    border: 2px solid #002438;
+    background-color: #00BDD2;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00456C;
+}
+
+button:active {
+    background-color: #002438;
+    color: #00BDD2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
