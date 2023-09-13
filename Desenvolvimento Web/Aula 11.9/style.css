@@ -1,0 +1,43 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    max-height: 100vh;
+    
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#inicio {
+    font-size: 90px;
+    color: purple;
+} 
+
+div.Links {
+    background-color: aqua;
+    color: black;
+    width: 600px;
+    height: 100px;
+}
+
+img {
+    height: 20%;
+    width: 20%;
+}
+
+div.pag {
+    display: flex;
+    align-items: center;
+}
+
+.midia {
+    display: flex;
+    align-items: center;
+}
+
+audio {
+    width: 1000px;
+}
