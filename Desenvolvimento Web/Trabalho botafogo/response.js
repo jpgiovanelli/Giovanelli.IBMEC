@@ -1,6 +1,7 @@
-const promise = fetch('https://botafogo-atletas.mange.li')
+const promise = fetch('https://botafogo-atletas.mange.li/all')
 
-promise.then( (response) => {
-        response.text().then( (data) => {console.log(data) } )
+promise.then( async (response) => {
+        console.log( await response.json()) 
     }
 )
+
