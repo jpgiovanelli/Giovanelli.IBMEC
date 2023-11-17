@@ -4,6 +4,22 @@ body.style.display = 'flex'
 body.style.flexDirection = 'column'
 body.style.alignItems = 'center'
 
+const handle = (e) => {
+    let text_value = String(e.target.value) 
+    if (text_value == 'Todos') {
+        text_value = 'all'
+    }
+    else {
+        text_value = text_value.toLowerCase()
+    }
+    console.log(text_value)
+    fetch_api(text_value)
+
+}
+
+const select = document.getElementById('menuopt')
+select.addEventListener('change', handle)
+
 const main = (atletas) => {
 
     const tamanho = atletas.length
@@ -21,7 +37,7 @@ const main = (atletas) => {
         div.style.width = "20rem"
         div.style.display = 'flex'
         div.style.flexDirection = 'column'
-        div.style.padding = '10px'
+        div.style.margin = '10px'
 
         div.dataset.id = atletas[i].id
         div.dataset.altura = atletas[i].altura
@@ -59,7 +75,18 @@ const click = (e) => {
     document.cookie = `altura=${artigo.dataset.altura}`
     document.cookie = `nome_completo=${artigo.dataset.nome_completo}`
 
-    console.log(acha_cookie('id'))
+    localStorage.setItem('id', artigo.dataset.id)
+    localStorage.setItem('altura', artigo.dataset.altura)
+    localStorage.setItem('nome_completo', artigo.dataset.nome_completo)
+    localStorage.setItem('nascimento', artigo.dataset.nascimento)
+
+    sessionStorage.setItem('id', artigo.dataset.id)
+    sessionStorage.setItem('altura', artigo.dataset.altura)
+    sessionStorage.setItem('nome_completo', artigo.dataset.nome_completo)
+    sessionStorage.setItem('nascimento', artigo.dataset.nascimento)
+
+    console.log(localStorage.getItem('nascimento'))
+    console.log(sessionStorage.getItem('nome_completo'))
 }
 
 const acha_cookie = (chave) => {
@@ -100,22 +127,41 @@ const variar_texto = async () => {
     }
 };
 
-// Chame a função
-variar_texto();
+const fetch_api = (page) => {
 
+    var element = document.getElementById('info')
 
-
-const promise = fetch('https://botafogo-atletas.mange.li/all')
-
-promise.then( async (response) => {
-        const hide_div = document.getElementById('teste')
-        const atletas =  await response.json()
-        main(atletas)
-        const wait = document.getElementById('Carregando')
-        wait.parentNode.removeChild(wait)
-        hide_div.hidden = false
+    try {
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
+    } catch (error) {
+        
     }
-)
 
+    var carregando = document.createElement('div')
+    carregando.id = 'Carregando'
+    var h1_carregando = document.createElement('h1')
+    h1_carregando.id = 'texto carregado'
+
+    carregando.appendChild(h1_carregando)
+    select.parentElement.appendChild(carregando)
+
+    variar_texto()
+
+    const promise = fetch(`https://botafogo-atletas.mange.li/${page}`)
+
+    promise.then( async (response) => {
+            const atletas =  await response.json()
+            main(atletas)
+            const wait = document.getElementById('Carregando')
+            wait.parentNode.removeChild(wait)
+        }
+    )
+}
+
+
+
+fetch_api('all')
 
 
