@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Opa</title>
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="/escudo.png" sizes="16x16">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-md5@0.7.3/build/md5.min.js"></script>
+    <script defer src="response.js"></script>
 </head>
 <body>
-    <div id="options">
-        <select id="menuopt" class="menu">
-            <option>Todos</option>
-            <option>Feminino</option>
-            <option>Masculino</option>
-        </select>
-    </div>
-    <div id="info">
-    </div>
+    <header>
+        <p>Atletas Botafogo</p>
+        <img class="logo-btf" src="escudo.png" alt="SellersFlow Icon">
+    </header>
+    <main>
+        <div class="caixa-retangular">
+            <login-element>
+                <div id="form">
+                    <div class="label">
+                        <h1>Login</h1>
+                        <p>Insira suas credenciais</p>
+                    </div>
+                    <div class="login">
+                        <username>
+                            <img class="user-icon" src="user.png" alt="User Icon">
+                            <input id="username" type="text" placeholder="Usuário">
+                        </username>
+                        <password>
+                            <img class="pass-icon" src="lock.png" alt="Password Icon">
+                            <input id="password" type="password" placeholder="Senha: 1234">
+                        </password>
+                    </div>
+                </div>
+            </login-element>
+        </div>
+    </main>
+    <div style="height: 100px;"></div>
 </body>
-<script src="codigo.js"></script>
-
 </html>
